@@ -13,26 +13,6 @@ It provides a clean, modular, and scalable structure for writing and executing a
 - Eclipse IDE or IntelliJ
 - Git & GitHub
 
-## Project Structure
-
-rest-assured-api-automation
-│
-├── src
-│   ├── main
-│   │   └── java
-│   │
-│   └── test
-│       └── java
-│           ├── base
-│           ├── tests
-│           ├── utils
-│           └── specifications
-│
-├── pom.xml
-├── .gitignore
-└── README.md
-
-
 ## Setup Instructions
 
 ### Clone the repository
