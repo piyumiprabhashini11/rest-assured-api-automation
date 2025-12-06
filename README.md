@@ -18,14 +18,20 @@ It provides a clean, modular, and scalable structure for writing and executing a
 rest-assured-api-automation
 │
 ├── src
-│ ├── main
-│ │ └── java # Utilities, config readers, payload builders
-│ └── test
-│ └── java # Test cases and test suites
+│   ├── main
+│   │   └── java
+│   │
+│   └── test
+│       └── java
+│           ├── base
+│           ├── tests
+│           ├── utils
+│           └── specifications
 │
-├── pom.xml # Maven configuration & dependencies
+├── pom.xml
 ├── .gitignore
 └── README.md
+
 
 ## Setup Instructions
 
