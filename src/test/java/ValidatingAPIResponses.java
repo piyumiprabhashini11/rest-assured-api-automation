@@ -17,8 +17,12 @@ public class ValidatingAPIResponses {
 		//given - All input details
 		//when - Submit the API - resource,http method(POST/GET)
 		//Then - Validate the response
-		RestAssured.baseURI="https://rahulshettyacademy.com";
+		// url- https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+		//URI - https://rahulshettyacademy.com/
+		//Resource - maps/api/place/add/json
+		//queryParam - key=qaclick123
 		
+		RestAssured.baseURI="https://rahulshettyacademy.com";
 		//Add Place
 		String response=given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/jason")
 		.body(Payload.addPlace()).when().post("maps/api/place/add/json")
