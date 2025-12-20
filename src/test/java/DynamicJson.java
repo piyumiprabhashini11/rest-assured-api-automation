@@ -12,13 +12,12 @@ public class DynamicJson {
 	public void addBook() {
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		JsonPath response=given().log().all().header("Content-Type","application/json").
-		body(Payload.AddBook()).
+		body(Payload.AddBook("adad","7595")).
 		when().post("Library/Addbook.php").
 		then().log().all().assertThat().statusCode(200).
 		extract().response().jsonPath();	
 		String id=response.getString("ID");
 		System.out.println("ID= "+id);
-		
-	
+			
 }
 }
