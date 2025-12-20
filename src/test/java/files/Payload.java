@@ -81,6 +81,14 @@ public class Payload {
 	}
 	
 	
+	public static String deleteBookByID(String IDVal) {
+		
+		return "{\r\n"
+				+ "    \"ID\": \""+IDVal+"\"\r\n"
+				+ "}";
+	}
+	
+	
 	
 	
 	
