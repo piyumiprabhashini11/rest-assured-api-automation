@@ -89,15 +89,18 @@ public class Payload {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static String createJiraIssue() {
+		return "{\r\n"
+				+ "    \"fields\": {\r\n"
+				+ "       \"project\":\r\n"
+				+ "       {\r\n"
+				+ "          \"key\": \"PIYUM\"\r\n"
+				+ "       },\r\n"
+				+ "       \"summary\": \"Issue in text fields-Automation\",\r\n"
+				+ "       \"issuetype\": {\r\n"
+				+ "          \"name\": \"Bug\"\r\n"
+				+ "       }\r\n"
+				+ "   }\r\n"
+				+ "}";
+	}	
 }
