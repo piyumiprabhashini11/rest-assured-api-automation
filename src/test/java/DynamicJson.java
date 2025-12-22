@@ -12,7 +12,9 @@ public class DynamicJson {
 
     // static ensures the same bookIds list is used by addBook() and deleteBook()
     // even if TestNG creates different objects for each test method.
-    static List<String> bookIds = new ArrayList<>();
+	//endpoint=https://rahulshettyacademy.com/Library/Addbook.php
+    
+	static List<String> bookIds = new ArrayList<>();
 	
 	@Test(dataProvider="BooksData")
 	public void addBook(String isbn,String aisle) {
