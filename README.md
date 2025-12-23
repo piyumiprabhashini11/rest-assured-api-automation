@@ -1,4 +1,4 @@
-# Rest Assured Java API Automation
+## Rest Assured Java API Automation
 
 This project is an API Test Automation Framework built using **Java**, **Rest Assured**, and **Maven**.  
 It provides a clean, modular, and scalable structure for writing and executing automated API tests.
