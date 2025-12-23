@@ -1,5 +1,5 @@
 
-public class POJO {
+public class Serialization {
 
 	//POJO(Plain Old Java Object) classes are used for serialization an deseralilization
 	//Serialization - Converting a java object into a request body(Jason or xml Payload)
@@ -14,12 +14,12 @@ public class POJO {
 	  }
 	  */
 	
-	//First need to create a private variable for each key of the JSON object (message,greetings)
+	//First need to create private variables for each key of the JSON object (message,greetings)
 	
 	private String message;
 	private String greetings;
 	
-	//Then implement getters and setters for each related value of the variables
+	//Then implement getters and setters for each variable
 	public String getMessage() {
 		return message;
 	}
@@ -42,16 +42,16 @@ public class POJO {
 	public static void main(String[] args) {
 		
 	//Create Java Object
-		POJO p=new POJO();
-		p.setMessage("Hello");
-		p.setGreetings("Hi");
+		Serialization s =new Serialization();
+		s.setMessage("Hello");
+		s.setGreetings("Hi");
 		
 		}
 
 	
 	//Finally pass the created java object into the api request body/payload as shown below
 	
-	 given().body(p)
+	 given().body(s)
 	.when().post("/message")
 	.then().statusCode(201);
 	
