@@ -28,7 +28,7 @@ public class Basics {
 				+ "  \"language\": \"French-IN\"\r\n"
 				+ "}").when().post("/maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200);
-
+		
 	}
 
 }
