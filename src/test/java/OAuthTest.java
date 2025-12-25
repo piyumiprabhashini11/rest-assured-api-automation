@@ -9,8 +9,8 @@ public class OAuthTest {
 		// TODO Auto-generated method stub
 		//To request the access token from Authentication Server by giving client id and client secret under grant type client credentials
 		RestAssured.baseURI="https://rahulshettyacademy.com";
-		String response=  given().formParam("client_id","692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com")
-		.formParam("client_secret","erZOWM9g3UtwNRj340YYaK_W")
+		String response=  given().formParam("client_id","Paste the REAL_CLIENT ID_VALUE here")
+		.formParam("client_secret","Paste the REAL_CLIENT SECRET_VALUE here")
 		.formParam("grant_type", "client_credentials")
 		.formParam("scope", "trust")
 		.when().log().all().post("/oauthapi/oauth2/resourceOwner/token")
