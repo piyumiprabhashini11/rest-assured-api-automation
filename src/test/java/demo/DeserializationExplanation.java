@@ -1,5 +1,6 @@
+package demo;
 
-public class Deserialization {
+public class DeserializationExplanation {
 	
 	//Deserialization - Converting a response body into a java object
 	
@@ -40,7 +41,7 @@ public class Deserialization {
 		// TODO Auto-generated method stub
 		
 		//Create Java Object
-		 Deserialization d=new Deserialization();
+		 DeserializationExplanation d=new DeserializationExplanation();
 		 d.getMessage();
 		 d.getGreetings();
 		 //After calling getters,we will get output varaiblae values of the response
