@@ -1,4 +1,4 @@
-package OAuth;
+package pojoDemo;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.assertTrue;
@@ -8,12 +8,12 @@ import java.util.List;
 import org.testng.Assert;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import pojo.API;
-import pojo.GetCourse;
-import pojo.Mobile;
-import pojo.WebAutomation;
+import pojoDeserialization.API;
+import pojoDeserialization.GetCourse;
+import pojoDeserialization.Mobile;
+import pojoDeserialization.WebAutomation;
 
-public class OAuthforDeserialization {
+public class DeserializationDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -92,10 +92,12 @@ public class OAuthforDeserialization {
 		}
 		
 		//To compare expected list of course titles with the actual course titles
+		
 		//1st Make an Array to insert all the expected course names
 		String[] courseTitles= {"Selenium Webdriver Java","Cypress","Cypress"};
+		
 		//Convert this Array to an ArrayList (This is for the convenience of comparing two ArrayLists)
-		List<String> expectedList=Arrays.asList(courseTitles); //To conver the Array to an ArrayList
+		List<String> expectedList=Arrays.asList(courseTitles); //To convert the Array to an ArrayList
 		
 		
 		//2nd make an Arraylist by inserting all actual course titles included in the API

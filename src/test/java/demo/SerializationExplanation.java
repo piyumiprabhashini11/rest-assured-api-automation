@@ -1,5 +1,6 @@
+package demo;
 
-public class Serialization {
+public class SerializationExplanation {
 
 	//POJO(Plain Old Java Object) classes are used for serialization an deseralilization
 	//Serialization - Converting a java object into a request body(Jason or xml Payload)
