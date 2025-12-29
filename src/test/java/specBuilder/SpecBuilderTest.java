@@ -2,8 +2,10 @@ package specBuilder;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import pojoSerialization.Location;
 import pojoSerialization.SetGoogleMapDetails;
 import static io.restassured.RestAssured.*;
@@ -32,11 +34,12 @@ public class SpecBuilderTest {
 		lc.setLng(33.427362);
 		ob.setLocation(lc);
 		
-		RequestSpecification req=new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key","qaclick123").build();
-		RequestSpecification res=given().spec(req).body(ob).log().all();
+		RequestSpecification reqSpec=new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key","qaclick123").build();
+		RequestSpecification req=given().spec(reqSpec).body(ob).log().all();
+		ResponseSpecification resSpec=new ResponseSpecBuilder().expectStatusCode(200).build();
 	    
-		Response response=res.when().post("/maps/api/place/add/json")
-		.then().assertThat().statusCode(200).extract().response();
+		Response response=req.when().post("/maps/api/place/add/json")
+		.then().assertThat().spec(resSpec).extract().response();
 		
 		String responseString=response.asString();
 		System.out.println(responseString);
